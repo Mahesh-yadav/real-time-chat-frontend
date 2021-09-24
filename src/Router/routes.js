@@ -1,7 +1,24 @@
-export const routes = [];
+import ConversationsListPage from '../pages/ConversationsListPage';
+import NewConversationPage from '../pages/NewConversationPage';
+import SignInPage from '../pages/SignInPage';
 
-// {
-//     path: '/',
-//     Component: HomePage,
-//     exact : true
-//   }
+export const routes = [
+  {
+    path: '/sign-in',
+    Component: SignInPage,
+    exact: true,
+    private: false,
+  },
+  {
+    path: '/',
+    Component: ConversationsListPage,
+    exact: true,
+    private: true,
+  },
+  {
+    path: '/conversations/new',
+    Component: NewConversationPage,
+    exact: true,
+    private: true,
+  },
+];
